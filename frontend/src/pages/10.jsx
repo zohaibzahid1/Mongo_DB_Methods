@@ -7,7 +7,7 @@ function TenOperationsPage() {
 
   const handleFindSkip = async (e) => {
   e.preventDefault();
-  // Make sure skip is a number and not empty
+  
   console.log('reeached here');
   const skipValue = skip ? skip : 0;
   const res = await fetch(`http://localhost:3000/api/findSkip?skip=${skipValue}`);

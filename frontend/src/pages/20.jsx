@@ -46,7 +46,7 @@ function TwentyOperationsPage() {
   const [fodName, setFodName] = useState('');
   const [fodResult, setFodResult] = useState(null);
 
-  // ...existing handlers...
+
 
   const handleGetIndexes = async () => {
     const res = await fetch('http://localhost:3000/api/getIndexes');
@@ -118,7 +118,7 @@ function TwentyOperationsPage() {
       </form>
       {dropIndexResult && <pre>{JSON.stringify(dropIndexResult, null, 2)}</pre>}
 
-      {/* More operations will be added here as you request */}
+     
       {/* 3. Get Indexes */}
       <button onClick={handleGetIndexes}>Get Indexes</button>
       {indexesResult && <pre>{JSON.stringify(indexesResult, null, 2)}</pre>}

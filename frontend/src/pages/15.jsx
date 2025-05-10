@@ -61,7 +61,6 @@ function FifteenOperationsPage() {
   // 5. Aggregate
   const [aggregateResult, setAggregateResult] = useState(null);
 
-  // ...existing handlers...
 
   const handleDeleteMany = async (e) => {
     e.preventDefault();
@@ -78,7 +77,7 @@ function FifteenOperationsPage() {
 
   const handleAggregate = async (e) => {
     e.preventDefault();
-    // Example pipeline: match age > 18, group by city, count
+    
     const pipeline = [
       { $match: { age: { $gt: 18 } } },
       { $group: { _id: "$city", count: { $sum: 1 } } }
@@ -156,7 +155,7 @@ function FifteenOperationsPage() {
       </form>
       {aggregateResult && <pre>{JSON.stringify(aggregateResult, null, 2)}</pre>}
 
-      {/* More operations will be added here as you request */}
+      
     </div>
   );
 }
